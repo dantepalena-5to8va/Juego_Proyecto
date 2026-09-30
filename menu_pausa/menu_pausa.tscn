@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b42mn5eqcpj1b"]
+
+[ext_resource type="Theme" uid="uid://bybtukog5rqwd" path="res://temas/menu_principal.tres" id="1_v567f"]
+[ext_resource type="Script" uid="uid://dj8dkw8nib1j0" path="res://escenas/menu_pausa/continuar.gd" id="2_xjpvb"]
+[ext_resource type="Script" uid="uid://x7ga540svjem" path="res://escenas/menu_pausa/volver_menu.gd" id="3_5q22x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kkhb2"]
+font_size = 75
+
+[node name="MenuPausa" type="Control" unique_id=1912258234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2059305472]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.5
+offset_top = -253.0
+offset_right = 281.5
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1738169414]
+layout_mode = 2
+text = "JUEGO PAUSADO"
+label_settings = SubResource("LabelSettings_kkhb2")
+
+[node name="Continuar" type="Button" parent="VBoxContainer" unique_id=873876686]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_v567f")
+text = "Continuar"
+script = ExtResource("2_xjpvb")
+
+[node name="Opciones" type="Button" parent="VBoxContainer" unique_id=2068960640]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_v567f")
+text = "Opciones"
+
+[node name="volver_menu" type="Button" parent="VBoxContainer" unique_id=620099847]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_v567f")
+text = "Volver al menú"
+script = ExtResource("3_5q22x")
