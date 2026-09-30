@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c57qko7e8paf"]
+
+[ext_resource type="Texture2D" uid="uid://dtqe8jhv5r6a6" path="res://escenas/dellota/tonky wonky.png" id="1_qxcbl"]
+[ext_resource type="Theme" uid="uid://bybtukog5rqwd" path="res://temas/menu_principal.tres" id="2_qxcbl"]
+[ext_resource type="Script" uid="uid://cscomwcsgyhan" path="res://escenas/dellota/reintentar.gd" id="3_qxcbl"]
+[ext_resource type="Script" uid="uid://x7ga540svjem" path="res://escenas/menu_pausa/volver_menu.gd" id="4_wgjoo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hfrkl"]
+font_size = 75
+font_color = Color(1, 0.023529412, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Derrota" type="Control" unique_id=335562607]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=763513724]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1846939443]
+position = Vector2(578, 328)
+scale = Vector2(2.4203153, 1.4216418)
+texture = ExtResource("1_qxcbl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1114249406]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -210.0
+offset_right = 287.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=110485862]
+layout_mode = 2
+text = "  HAS MUERTO"
+label_settings = SubResource("LabelSettings_hfrkl")
+
+[node name="Reintentar" type="Button" parent="VBoxContainer" unique_id=232424268]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_qxcbl")
+text = "Reintentar"
+script = ExtResource("3_qxcbl")
+
+[node name="volver_menu" type="Button" parent="VBoxContainer" unique_id=1890854906]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_qxcbl")
+text = "Volver al menú"
+script = ExtResource("4_wgjoo")
