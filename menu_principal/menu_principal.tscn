@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bxnd43f748l3j"]
+
+[ext_resource type="Theme" uid="uid://bybtukog5rqwd" path="res://temas/menu_principal.tres" id="1_1tgsf"]
+[ext_resource type="Texture2D" uid="uid://bffdppcxvubsl" path="res://escenas/menu_principal/fondo.png" id="1_a8m85"]
+[ext_resource type="Script" uid="uid://bkq3a4xbayp28" path="res://escenas/menu_principal/boton_salir.gd" id="2_53ly4"]
+[ext_resource type="Script" uid="uid://bypon7y61hte2" path="res://escenas/menu_principal/boton_jugar.gd" id="2_jylg6"]
+[ext_resource type="PackedScene" uid="uid://cfm0yujx7ki3e" path="res://escenas/True_Tutorial/tutorial_01.tscn" id="3_00m27"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdrqn"]
+font_size = 100
+
+[node name="MenuPrincipal" type="Control" unique_id=1724103269]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1706229028]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=784416510]
+position = Vector2(598.49994, 306.5)
+scale = Vector2(1.8491846, 1.9368687)
+texture = ExtResource("1_a8m85")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=881099647]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.5
+offset_top = -253.0
+offset_right = 281.5
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1767377633]
+layout_mode = 2
+text = "CAVE-FORM"
+label_settings = SubResource("LabelSettings_bdrqn")
+
+[node name="Jugar" type="Button" parent="VBoxContainer" unique_id=872853798]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_1tgsf")
+text = "Jugar"
+script = ExtResource("2_jylg6")
+tutorial_01 = ExtResource("3_00m27")
+
+[node name="Opciones" type="Button" parent="VBoxContainer" unique_id=1673680892]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_1tgsf")
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=56375417]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_1tgsf")
+text = "Salir"
+script = ExtResource("2_53ly4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2130860405]
