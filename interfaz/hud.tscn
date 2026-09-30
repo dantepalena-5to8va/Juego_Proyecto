@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://p3vpoc3q67n0"]
+
+[ext_resource type="Script" uid="uid://ovqd4tg4h7" path="res://escenas/interfaz/hud.gd" id="1_k8an1"]
+[ext_resource type="Texture2D" uid="uid://drhj1neraqjq" path="res://escenas/interfaz/corazonlleno.png" id="2_5c0ki"]
+[ext_resource type="Texture2D" uid="uid://u6oxk5toyda0" path="res://escenas/interfaz/corazonvacio.png" id="3_eb5ud"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1835968729]
+script = ExtResource("1_k8an1")
+textura_llena = ExtResource("2_5c0ki")
+textura_vacia = ExtResource("3_eb5ud")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=699233134]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1162302918]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="corazones" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=509431746]
+layout_mode = 2
+
+[node name="balas" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1128157649]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "7/7"
