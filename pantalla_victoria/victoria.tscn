@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cjjhq38r2875r"]
+
+[ext_resource type="Texture2D" uid="uid://cqjxqdkelmhdb" path="res://escenas/pantalla_victoria/victoria.png.png" id="1_ordxg"]
+[ext_resource type="Theme" uid="uid://bybtukog5rqwd" path="res://temas/menu_principal.tres" id="2_m3snh"]
+[ext_resource type="Script" uid="uid://x7ga540svjem" path="res://escenas/menu_pausa/volver_menu.gd" id="4_mre3d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i7jyd"]
+font_size = 95
+font_color = Color(1, 1, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Victoria" type="Control" unique_id=1924755859]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=159207462]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1545333830]
+position = Vector2(640.99994, 322.00003)
+scale = Vector2(1.1663635, 0.8986841)
+texture = ExtResource("1_ordxg")
+
+[node name="Label" type="Label" parent="." unique_id=1360010116]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 423.0
+offset_right = 860.0
+offset_bottom = 553.0
+text = "VICTORIA"
+label_settings = SubResource("LabelSettings_i7jyd")
+
+[node name="siguiente" type="Button" parent="." unique_id=117049327]
+texture_filter = 1
+layout_mode = 0
+offset_left = 678.0
+offset_top = 552.0
+offset_right = 1253.0
+offset_bottom = 662.0
+theme = ExtResource("2_m3snh")
+text = "Siguiente Nivel"
+
+[node name="volver_menu" type="Button" parent="." unique_id=1585631721]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 554.0
+offset_right = 582.0
+offset_bottom = 664.0
+theme = ExtResource("2_m3snh")
+text = "Volver al menú"
+script = ExtResource("4_mre3d")
