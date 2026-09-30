@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c30uxqo35edj4"]
+
+[ext_resource type="Texture2D" uid="uid://bsus3kjecn7pg" path="res://escenas/balas/balasteel.png" id="1_5amum"]
+[ext_resource type="Script" uid="uid://bx4ck7cqkprf2" path="res://escenas/balas/balubi_1.gd" id="1_vtkui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sygax"]
+size = Vector2(16, 16)
+
+[node name="Balubi" type="Area2D" unique_id=627677719]
+collision_layer = 32
+collision_mask = 17
+script = ExtResource("1_vtkui")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=926539359]
+texture = ExtResource("1_5amum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1888919870]
+shape = SubResource("RectangleShape2D_sygax")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1052013776]
+rect = Rect2(-8, -8, 16, 16)
